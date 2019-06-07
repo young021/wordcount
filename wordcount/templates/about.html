@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ffdesign.css' %}"> 
+</head>
+<body>
+    
+    <h1>about page</h1>
+
+<h3>이곳은 글자를 세는 워드카운트 홈페이지.</h3>
+<br>
+<h3>글자를 입력하고 같은 단어는 몇번 쓰였는지 알아봅시다</h3>
+<br>
+<h3>글자를 입력하고 가장 많이 쓰인 단어를 찾아봅시다</h3>
+<br>
+
+
+
+<!-- <form method="POST">
+{%csrf_token%}
+<input type="submit" value="write">
+<br>
+
+
+</form> -->
+
+<a href="{%url 'home'%}"><h3>홈으로 돌아가기</h3></a>
+
+
+</body>
+</html>

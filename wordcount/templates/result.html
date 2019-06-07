@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ffdesign.css' %}"> 
+</head>
+
+    
+    <h1>result page</h1>
+
+
+
+<h3>당신이 입력한 텍스트는 {{total}} 로 구성.</h3>
+<!-- 총단어수  -->
+<a href="{%url 'home'%}">다시하기</a>
+<br>
+<!-- key 값 -->
+<ol><h2>입력한 텍스트: </h2>
+{{full}}
+
+<h2>단어  카운트 시작</h2>
+{%for word,howmany in dictionary%}
+{{word}}:{{howmany}}
+<br>
+{%endfor%}
+ <!-- {{dictionary}} -->
+
+ <h2>가장 적게 쓰인 단어를 순서대로 나열해보자</h2>
+ 
+{{word_most}} 
+ 
+
+ <h2>가장 많이 쓰인 단어는?</h2>
+ 
+ 가장 많이 쓰인단어 :
+ {{wordmostone}}
+
+
+
+
